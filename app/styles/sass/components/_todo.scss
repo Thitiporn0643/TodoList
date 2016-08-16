@@ -1,0 +1,272 @@
+ $tab-hearder-font : 24px;
+
+.web-header {
+ 	margin: 0 auto;
+ 	font-weight: bold;
+}
+.tab-header {
+ 	margin-right: auto;
+ 	font-size: $tab-hearder-font;
+	font-weight: bold;
+}
+
+.header-line {
+  padding: 0;
+  border: none;
+  border-top: solid 5px;
+  text-align: center;
+  max-width: 250px;
+  margin: 15px auto 15px;
+}
+
+.window {
+  border-radius: .3em;
+  background-color: rgb(205, 90, 145);
+}
+
+.window-dark {
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	background-color: #B44181;
+	border-radius: .3em;
+  color: white;
+}
+
+.complete-task {
+	display: inline;
+  margin-right: auto;
+  font-weight: bold;
+  border-bottom: 2px solid;
+  text-transform: uppercase
+}
+
+ .header-background {
+	background-color: rgba(2, 106, 167, 1);
+}
+
+.header-background-dark {
+ 	background-color: rgba(0, 81, 142, 1);
+}
+
+.task-name {
+  margin: 10px;
+  margin-right: auto;
+}
+
+.todo-card {
+  width: 400px;
+  margin: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+.complete-card {
+ margin: 16px;
+ border: 5px solid #fff;
+ font-size: 24px;
+ text-align: center;
+ background-color: transparent
+}
+
+.todo-window {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.list {     
+  background: #e2e4e6;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative;
+  padding: 16px;
+  white-space: normal;
+}
+
+ #show-complete-task {
+	padding-right: 30px;
+}
+
+.add-task-window {
+	width: 270px;
+	margin-top: 16px;
+	margin-bottom: auto;
+  padding: 16px 36px;
+	border-radius: .3em;
+  background-color: #B44181;
+  font-weight: bold;
+  color: white;
+  transition: background-color 85ms ease-in;
+
+  &:hover {
+  	background-color: #810E4E;
+     }
+}
+
+#requiredData {
+  display: none;
+}
+
+#show-form {
+ 	display: block;
+}
+
+.todo-title {
+ 	display: inline;
+	margin-bottom: 0.75rem;
+}
+
+#tasklist {
+ 	padding-left: 0; 
+}
+.task-card:hover .button-group{
+ 	opacity: 1;
+}
+
+.task-card .button-group {
+ 	position: absolute;
+  opacity: 0;
+  top: 0px;
+  right: 10px;
+  height: 16px;
+  border: 1px solid #000;
+  z-index: 5;
+  transition: opacity 150ms;
+  border: 0;
+}
+button {
+  margin: 5px;
+}
+
+li.task-card {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  font-family: Arial;
+  font-size: 1.2em;
+  padding: 15px 10px;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+}
+
+li.task-card:hover {
+  background-color: rgba(100,100,100,0.5);
+}
+
+li.task-card:hover .deleteTaskBtn {
+  visibility: visible;
+  opacity: 1;
+}
+
+li.task-card:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+
+li > input[type="text"] {
+  width: 115px;
+}
+
+input[type="text"] {
+  margin: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+
+input[type="text"]:focus {
+  color: #333;
+}
+
+input.taskCheckbox {
+  margin: 15px;
+}
+
+input.taskCheckbox + label.taskLabel {
+  color: black;
+}
+
+input.taskCheckbox:checked + label.taskLabel {
+  font-style: italic;
+  color: grey;
+}
+
+input[placeholder] {
+  font-size: 1.1em;
+}
+
+/* Edit Task */
+ul li input[type=text] {
+  display: none;
+}
+
+ul li.editMode input[type=text] {
+  display: block;
+}
+
+ul li.editMode label {
+  display:none;
+}
+.deleteTaskBtn {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: .2;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+  top: 300px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
