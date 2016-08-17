@@ -110,8 +110,8 @@ html, body {
 .mdl-demo section > button {
   position: absolute;
   z-index: 99;
-  top: 8px;
-  right: 8px;
+  bottom: 8px;
+  left: 8px;
 }
 .mdl-demo section .section__circle {
   display: flex;
