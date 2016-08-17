@@ -152,7 +152,7 @@
       updatebtn.onclick = UpdateThisTask;
 
       viewBtn .className = 'viewTaskBtn btn btn-primary';
-      viewBtn .textContent = 'Vew';
+      viewBtn .textContent = 'View';
       viewBtn .onclick = viewThisTask;
 
       delBtn.className = 'deleteTaskBtn';
@@ -230,7 +230,7 @@ function viewThisTask(e){
   var modal = document.getElementById('myModal');
   modal.style.display = 'block';
   var content = document.getElementById('show-details');
-  content.innerHTML = '<h5>Task Id: '+ id + '</h5><h5>Task Title: '+ taskList[id].name + '</h5><h5>Task Detail: ' + taskList[id].detail+'</h5><h5>Task Date: ' + taskList[id].date + '</h5>'; 
+  content.innerHTML = '<h5>Task ID: '+ id + '</h5><h5>Task Title: '+ taskList[id].name + '</h5><h5>Task Detail: ' + taskList[id].detail+'</h5><h5>Task Date: ' + taskList[id].date + '</h5>'; 
   var span = document.getElementsByClassName("close")[0];
   span.onclick = function() {
     modal.style.display = 'none';
